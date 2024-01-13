@@ -20,8 +20,8 @@ const connect = () => {
       throw err;
     });
 };
+
 app.use(express.json());
-console.log("JWT_KEY:", process.env.JWT_KEY);
 app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
